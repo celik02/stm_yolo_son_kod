@@ -156,8 +156,8 @@ def proper_detection(frame, rects, logo, confidences, classIDs):
 	mid_x = int((x1 + x2) / 2)
 	mid_y = int((y1 + y2) / 2)
 
-	half_w = int((x2 - x1) * 0.13)
-	half_h = int((y2 - y1) * 0.13)
+	half_w = int((x2 - x1) * 0.25)
+	half_h = int((y2 - y1) * 0.25)
 
 	r_x1 = mid_x - half_w
 	r_x2 = mid_x + half_w
@@ -183,6 +183,6 @@ def proper_detection(frame, rects, logo, confidences, classIDs):
 
 def is_centered(c):
 	false_number = len([i for i in c if i == False])
-	r = 1 if false_number <= 1 else 0
+	r = 1 if false_number <= 3 else 0
 	return r
 

@@ -37,7 +37,7 @@ def signal_handler(sig, frame):
 def flight(pidx, pidy, satisfactory, phase, centered, logo, pos_dict, is_it_big, seen):
 	signal.signal(signal.SIGINT, signal_handler)
 	iha = ihamibagla()
-	armolveuc(iha, 9)
+	armolveuc(iha, 5)
 	saf=time.time()
 
 	init_heading = (iha.heading / 180.0) * math.pi
@@ -157,7 +157,7 @@ def cv(up_left_x, up_left_y, bottom_right_x, bottom_right_y,
 	logo_list = ["stm", "odtu", "ort", "helikopter_inis"]
 	pos_dict["turk_bayragi"] = 5
 	lost_list = [False for i in range(4)]
-	centered_list = [False for i in range(5)]
+	centered_list = [False for i in range(10)]
 	order_of_positions = [2, 4, 3, 1]
 	camera = cv2.VideoCapture(gstreamer_pipeline(), cv2.CAP_GSTREAMER)
 	time.sleep(0.2)

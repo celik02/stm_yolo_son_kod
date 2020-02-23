@@ -32,15 +32,15 @@ class PID :
 		h = sag_alty - sol_usty
 		#kph, kih, kdh = interpolation(w, h, logo)
 
-		kphx = 0.0015
+		kphx = 0.0014
 		kihx = 0.0001
 		
-		kdhx = 0.00
+		kdhx = 0
 		
-		kphy = 0.0015
+		kphy = 0.0013
 		kihy = 0.0001
 		
-		kdhy = 0.00
+		kdhy = 0
 		
 		# Kilitlenme dikdortgeninin merkez koordinatini hesapla
 		ort_x = sol_ustx
